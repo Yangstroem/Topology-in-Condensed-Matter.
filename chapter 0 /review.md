@@ -56,3 +56,9 @@ Such $H$ have following properties:
 - Ket:  $\psi \to |\psi\rangle = \Sigma_{a}\psi _a 
 |a \rangle$
 - bra times ket:  $\langle b | a \rangle = \delta_{ab}.$
+
+## Bloch Theorem
+crystal
+unit cell
+lattice vector
+$H_{(l,n),(l‘，m)}=H_{(l,n-m),(l',0)}$?
