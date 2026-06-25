@@ -58,7 +58,48 @@ Such $H$ have following properties:
 - bra times ket:  $\langle b | a \rangle = \delta_{ab}.$
 
 ## Bloch Theorem
-crystal
-unit cell
-lattice vector
-$H_{(l,n),(l‘，m)}=H_{(l,n-m),(l',0)}$?
+### Periodicity
+for periodic structure like crystal , we divided it into single unit.To describe one position,we need two parameters:   which unit by lattice vectors $n$ and which orbitals in this cell by $l$.
+
+### translational symmetry
+to transport from one orbital of one cell ,to another orbital of another cell,the energy we need only depends on the relative locaton for two orbitals ,that's why we hope the H satisfies:
+$H_{(l,n),(l‘，m)}=H_{(l,n-m),(l',0)}$
+## Bloch Equation
+$$Hψ = Eψ$$
+in cristal ,each position could come from every positions in this finite crystal,that's why we need the Hamitonian to be like:
+$$
+
+Σ_{l',m} H_{(l,n),(l',m)}
+$$
+simplify the Schrodinger equation,we got:
+$$
+H(k)u(k)=E(k)u(k)
+$$
+k is called crystal momentum.Each translation of one unit cell, the phase of the wave function increases by k.The range $[−π,π]$ where $k$ is confined in ,  is referred to as the Brillouin Zone. 
+## SSH Model
+For some $1-D$ periodic materials like polyacetylene,there are two different part in each repeated unit,let's call the $L$ part and the $R$ part.For the $L$ part in unit labeled $n$,the $R$ part in the unit $n$ is on its right side while the $R$ part in unit $n-1$ is on its left side.And,the energy gap between $L_n $and $R_n$ is very likely different from that between $R_{n-1}$ and $L_n$.
+$$
+H_{(L,0),(R,0)}=H _{(R,0),(L,0)}=t_ 1
+\\
+H_{(L,1),(R,0)}=H _{(R,−1),(L,0)}=t_ 2
+$$
+According to Bloch therom,we can write the Hamitonian as below:
+$$
+H(k) =
+\begin{pmatrix}
+0               &  t_1 + t_2 e^{-ik} \\
+ t_1 + t_2 e^{ik}  & 0                
+\end{pmatrix}
+$$
+The $E$ ,which appears to be the eigenvalue,will be:
+$$
+E(k) = ± |t_1 + t_2 e^{ik}|
+E(k)^{\pm}=\pm \sqrt{ t_1^2+t_2^2+2t_1t_2\cos(k)}
+$$
+As $k$ varies,
+$$
+E^{+}(k) ≥ |t_1 - t_2|\\
+E^{-}(k) ≤ -|t_1 - t_2|
+$$
+And there is a gap for energy:from 
+$−∣t_1−t _2∣ $ to $ ∣t _1−t_ 2∣$.So,it's an insulator.
